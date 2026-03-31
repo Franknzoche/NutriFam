@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',# pour utiliser Django REST Framework
+    'rest_framework.authtoken',  # pour gérer les tokens de connexion
+    'users',# notre application pour gérer les utilisateurs
 ]
 
 MIDDLEWARE = [
@@ -115,3 +118,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+AUTH_USER_MODEL = 'users.CustomUser' # pour utiliser notre modèle d'utilisateur personnalisé
